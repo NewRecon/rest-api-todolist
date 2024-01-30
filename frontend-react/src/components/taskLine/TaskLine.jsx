@@ -17,7 +17,7 @@ export default function TaskLine(props) {
    return (
       <div className="taskLine" >
          <div className="taskLine_el">{task.id}</div>
-         <div className="taskLine_el description" style={task.status ? done : inprocess }>{task.description}</div>
+         <div className="taskLine_el description" style={task.status ? inprocess : done }>{task.description}</div>
          <div className="taskLine_el">{task.openTask}</div>
          <div className="taskLine_el">{task.closeTask}</div>
          <div className='buttonLine'>

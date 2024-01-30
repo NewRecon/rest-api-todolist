@@ -9,32 +9,33 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/api/v0.1/tasks")
+@RequestMapping("/api/v0.1")
+@CrossOrigin("http://localhost:3000/")
 public class TaskController {
 
     private final TaskService service;
 
-    @GetMapping
+    @GetMapping("/tasks")
     public List<Task> getAllTasks(){
         return service.getAllTasks();
     }
 
-    @PostMapping("/create_task")
+    @PostMapping("/task")
     public Task createTask(@RequestBody Task task) {
         return service.createTask(task);
     }
 
-    @PutMapping("/update_task")
+    @PutMapping("/task")
     public void updateTask(@RequestBody Task task) {
         service.updateTask(task);
     }
 
-    @DeleteMapping("/delete_task/{id}")
+    @DeleteMapping("/task/{id}")
     public void deleteTaskById(@PathVariable Integer id) {
         service.deleteTaskById(id);
     }
 
-    @DeleteMapping("/delete_all")
+    @DeleteMapping("/tasks")
     public void deleteAllTasks() {
         service.deleteAllTasks();
     }
