@@ -1,4 +1,4 @@
-.input_form{
+.input_form>form{
    display: flex;
    gap: 20px;
 }

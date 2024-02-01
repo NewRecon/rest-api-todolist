@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Header from '../components/header/Header';
 import TaskLine from '../components/taskLine/TaskLine';
 import "../models/Task.js"
-import Task from '../models/Task.js';
+
 import axios from 'axios';
+import Task from '../models/Task.js';
+import ModelWindow from '../components/modelWindow/ModelWindow.jsx';
 
 export default function Home() {
 
@@ -23,7 +25,7 @@ export default function Home() {
       <Header loadTasks = {loadTasks}/>
       {
          tasks.map((task, id) => (
-            <TaskLine task = {task}/>
+            <TaskLine id={id} task = {task} loadTasks = {loadTasks}/>
          ))
       }
    </div>

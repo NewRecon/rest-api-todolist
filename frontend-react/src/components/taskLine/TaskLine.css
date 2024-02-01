@@ -22,3 +22,9 @@
 .buttonLine>button{
    margin: 0px 5px;
 }
+
+.modelWindow{
+   position: absolute;
+   top: 0;
+   left: 0;
+}
