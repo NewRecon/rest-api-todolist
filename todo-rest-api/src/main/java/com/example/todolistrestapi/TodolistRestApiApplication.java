@@ -8,6 +8,6 @@ public class TodolistRestApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TodolistRestApiApplication.class, args);
-	}
 
+	}
 }
